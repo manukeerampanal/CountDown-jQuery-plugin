@@ -2,8 +2,8 @@
 CountDown-jQuery-plugin
 
 #Ways to set the countdown
-<code><pre>// Initiate Countdown
-jQuery(document).ready(function() {
+####Initiate Countdown
+<code><pre>jQuery(document).ready(function() {
 	$('#countdown_dashboard').countDown({
 		targetOffset: {
 			'day': 		0,
@@ -14,10 +14,9 @@ jQuery(document).ready(function() {
 			'sec': 		0
 		}
 	});
-});
-
-// Set by specific date/time
-function set_by_date() {
+});</pre></code>
+####Set by specific date/time
+<code><pre>function set_by_date() {
 	$('#countdown_dashboard').stopCountDown();
 	$('#countdown_dashboard').setCountDown({
 		targetDate: {
@@ -30,10 +29,9 @@ function set_by_date() {
 		}
 	});
 	$('#countdown_dashboard').startCountDown();
-}
-
-// Set by date/time offset
-function set_by_offset() {
+}</pre></code>
+####Set by date/time offset
+<code><pre>function set_by_offset() {
 	$('#countdown_dashboard').stopCountDown();
 	$('#countdown_dashboard').setCountDown({
 		targetOffset: {
@@ -50,8 +48,8 @@ function set_by_offset() {
 
 
 #Start/Stop/Reset
-<code><pre>// Set the Countdown
-jQuery(document).ready(function() {
+####Set the Countdown
+<code><pre>jQuery(document).ready(function() {
 	$('#countdown_dashboard').countDown({
 		targetOffset: {
 			'day': 		1,
@@ -62,20 +60,17 @@ jQuery(document).ready(function() {
 			'sec': 		1
 		}
 	});
-});
-
-// Stop countdown
-function stop() {
+});</pre></code>
+####Stop countdown
+<code><pre>function stop() {
 	$('#countdown_dashboard').stopCountDown();
-}
-
-// Start countdown
-function start() {
+}</pre></code>
+####Start countdown
+<code><pre>function start() {
 	$('#countdown_dashboard').startCountDown();
-}
-
-// reset and start
-function reset() {
+}</pre></code>
+####reset and start
+<code><pre>function reset() {
 	$('#countdown_dashboard').stopCountDown();
 	$('#countdown_dashboard').setCountDown({
 		targetOffset: {
