@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Countdown-jquery-plugin by manukeerampanal</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Countdown-jquery-plugin</h1>
+      <h2 class="project-tagline">CountDown-jQuery-plugin</h2>
+      <a href="https://github.com/manukeerampanal/CountDown-jQuery-plugin" class="btn">View on GitHub</a>
+      <a href="https://github.com/manukeerampanal/CountDown-jQuery-plugin/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/manukeerampanal/CountDown-jQuery-plugin/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="countdown-jquery-plugin" class="anchor" href="#countdown-jquery-plugin" aria-hidden="true"><span class="octicon octicon-link"></span></a>CountDown-jQuery-plugin</h1>
+
+<p>CountDown-jQuery-plugin</p>
+
+<h1>
+<a id="ways-to-set-the-countdown" class="anchor" href="#ways-to-set-the-countdown" aria-hidden="true"><span class="octicon octicon-link"></span></a>Ways to set the countdown</h1>
+
+<h4>
+<a id="initiate-countdown" class="anchor" href="#initiate-countdown" aria-hidden="true"><span class="octicon octicon-link"></span></a>Initiate Countdown</h4>
+
+<p><code><pre>jQuery(document).ready(function() {
+    $('#countdown_dashboard').countDown({
+        targetOffset: {
+            'day':      0,
+            'month':    0,
+            'year':     0,
+            'hour':     0,
+            'min':      0,
+            'sec':      0
+        }
+    });
+});</pre></code></p>
+
+<h4>
+<a id="set-by-specific-datetime" class="anchor" href="#set-by-specific-datetime" aria-hidden="true"><span class="octicon octicon-link"></span></a>Set by specific date/time</h4>
+
+<p><code><pre>function set_by_date() {
+    $('#countdown_dashboard').stopCountDown();
+    $('#countdown_dashboard').setCountDown({
+        targetDate: {
+            'day':      15,
+            'month':    1,
+            'year':     2011,
+            'hour':     12,
+            'min':      0,
+            'sec':      0
+        }
+    });
+    $('#countdown_dashboard').startCountDown();
+}</pre></code></p>
+
+<h4>
+<a id="set-by-datetime-offset" class="anchor" href="#set-by-datetime-offset" aria-hidden="true"><span class="octicon octicon-link"></span></a>Set by date/time offset</h4>
+
+<p><code><pre>function set_by_offset() {
+    $('#countdown_dashboard').stopCountDown();
+    $('#countdown_dashboard').setCountDown({
+        targetOffset: {
+            'day':      1,
+            'month':    1,
+            'year':     0,
+            'hour':     1,
+            'min':      1,
+            'sec':      1
+        }
+    });
+    $('#countdown_dashboard').startCountDown();
+}</pre></code></p>
+
+<h1>
+<a id="startstopreset" class="anchor" href="#startstopreset" aria-hidden="true"><span class="octicon octicon-link"></span></a>Start/Stop/Reset</h1>
+
+<h4>
+<a id="set-the-countdown" class="anchor" href="#set-the-countdown" aria-hidden="true"><span class="octicon octicon-link"></span></a>Set the Countdown</h4>
+
+<p><code><pre>jQuery(document).ready(function() {
+    $('#countdown_dashboard').countDown({
+        targetOffset: {
+            'day':      1,
+            'month':    1,
+            'year':     0,
+            'hour':     1,
+            'min':      1,
+            'sec':      1
+        }
+    });
+});</pre></code></p>
+
+<h4>
+<a id="stop-countdown" class="anchor" href="#stop-countdown" aria-hidden="true"><span class="octicon octicon-link"></span></a>Stop countdown</h4>
+
+<p><code><pre>function stop() {
+    $('#countdown_dashboard').stopCountDown();
+}</pre></code></p>
+
+<h4>
+<a id="start-countdown" class="anchor" href="#start-countdown" aria-hidden="true"><span class="octicon octicon-link"></span></a>Start countdown</h4>
+
+<p><code><pre>function start() {
+    $('#countdown_dashboard').startCountDown();
+}</pre></code></p>
+
+<h4>
+<a id="reset-and-start" class="anchor" href="#reset-and-start" aria-hidden="true"><span class="octicon octicon-link"></span></a>reset and start</h4>
+
+<p><code><pre>function reset() {
+    $('#countdown_dashboard').stopCountDown();
+    $('#countdown_dashboard').setCountDown({
+        targetOffset: {
+            'day':      1,
+            'month':    1,
+            'year':     0,
+            'hour':     1,
+            'min':      1,
+            'sec':      1
+        }
+    });<br>
+    $('#countdown_dashboard').startCountDown();
+}</pre></code></p>
+
+<h1>
+<a id="oncomplete-event" class="anchor" href="#oncomplete-event" aria-hidden="true"><span class="octicon octicon-link"></span></a>onComplete event</h1>
+
+<p><code><pre>// Set the Countdown
+jQuery(document).ready(function() {
+    $('#countdown_dashboard').countDown({
+        targetOffset: {
+            'day':      0,
+            'month':    0,
+            'year':     0,
+            'hour':     0,
+            'min':      0,
+            'sec':      5
+        }, 
+        // onComplete function
+        onComplete: function() { $('#complete_info_message').slideDown() }
+    });
+});</pre></code></p>
+
+<h1>
+<a id="multiple-instances" class="anchor" href="#multiple-instances" aria-hidden="true"><span class="octicon octicon-link"></span></a>Multiple instances</h1>
+
+<p><code><pre>jQuery(document).ready(function() {
+    // Set the first Countdown
+    $('#countdown_dashboard').countDown({
+        targetOffset: {
+            'day':      1,
+            'month':    1,
+            'year':     0,
+            'hour':     1,
+            'min':      1,
+            'sec':      5
+        }
+    });</pre></code></p>
+
+<pre><code>// Set the second Countdown
+$('#countdown_dashboard2').countDown({
+    targetOffset: {
+        'day':      10,
+        'month':    1,
+        'year':     0,
+        'hour':     6,
+        'min':      34,
+        'sec':      10
+    }
+});
+</code></pre>
+
+<p>});
+</p>
+
+<h1>
+<a id="omit-weeks-3-digit-days" class="anchor" href="#omit-weeks-3-digit-days" aria-hidden="true"><span class="octicon octicon-link"></span></a>Omit weeks (3-digit days)</h1>
+
+<p><code><pre>// Initiate Countdown
+jQuery(document).ready(function() {
+    $('#countdown_dashboard').countDown({
+        targetOffset: {
+            'day':      0,
+            'month':    0,
+            'year':     1,
+            'hour':     0,
+            'min':      0,
+            'sec':      3
+        },
+        omitWeeks: true
+    });
+});
+</pre></code></p>
+
+<h1>
+<a id="standard-time-utc" class="anchor" href="#standard-time-utc" aria-hidden="true"><span class="octicon octicon-link"></span></a>Standard time (UTC)</h1>
+
+<p><code><pre>// Initiate Countdown
+jQuery(document).ready(function() {
+    $('#countdown_dashboard').countDown({
+        targetDate: {
+            'day':      17,
+            'month':    12,
+            'year':     2010,
+            'hour':     01,
+            'min':      0,
+            'sec':      0,
+            // time set as UTC 
+            'utc':      true
+        }
+    });
+});
+</pre></code></p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/manukeerampanal/CountDown-jQuery-plugin">Countdown-jquery-plugin</a> is maintained by <a href="https://github.com/manukeerampanal">manukeerampanal</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
+
