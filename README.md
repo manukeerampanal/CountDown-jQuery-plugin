@@ -3,7 +3,7 @@ CountDown-jQuery-plugin
 
 #Ways to set the countdown
 ####Initiate Countdown
-<code><pre>jQuery(document).ready(function() {
+<pre><code>jQuery(document).ready(function() {
 	$('#countdown_dashboard').countDown({
 		targetOffset: {
 			'day': 		0,
@@ -14,9 +14,9 @@ CountDown-jQuery-plugin
 			'sec': 		0
 		}
 	});
-});</pre></code>
+});</code></pre>
 ####Set by specific date/time
-<code><pre>function set_by_date() {
+<pre><code>function set_by_date() {
 	$('#countdown_dashboard').stopCountDown();
 	$('#countdown_dashboard').setCountDown({
 		targetDate: {
@@ -29,9 +29,9 @@ CountDown-jQuery-plugin
 		}
 	});
 	$('#countdown_dashboard').startCountDown();
-}</pre></code>
+}</code></pre>
 ####Set by date/time offset
-<code><pre>function set_by_offset() {
+<pre><code>function set_by_offset() {
 	$('#countdown_dashboard').stopCountDown();
 	$('#countdown_dashboard').setCountDown({
 		targetOffset: {
@@ -44,12 +44,12 @@ CountDown-jQuery-plugin
 		}
 	});
 	$('#countdown_dashboard').startCountDown();
-}</pre></code>
+}</code></pre>
 
 
 #Start/Stop/Reset
 ####Set the Countdown
-<code><pre>jQuery(document).ready(function() {
+<pre><code>jQuery(document).ready(function() {
 	$('#countdown_dashboard').countDown({
 		targetOffset: {
 			'day': 		1,
@@ -60,17 +60,17 @@ CountDown-jQuery-plugin
 			'sec': 		1
 		}
 	});
-});</pre></code>
+});</code></pre>
 ####Stop countdown
-<code><pre>function stop() {
+<pre><code>function stop() {
 	$('#countdown_dashboard').stopCountDown();
-}</pre></code>
+}</code></pre>
 ####Start countdown
-<code><pre>function start() {
+<pre><code>function start() {
 	$('#countdown_dashboard').startCountDown();
-}</pre></code>
+}</code></pre>
 ####reset and start
-<code><pre>function reset() {
+<pre><code>function reset() {
 	$('#countdown_dashboard').stopCountDown();
 	$('#countdown_dashboard').setCountDown({
 		targetOffset: {
@@ -83,11 +83,11 @@ CountDown-jQuery-plugin
 		}
 	});				
 	$('#countdown_dashboard').startCountDown();
-}</pre></code>
+}</code></pre>
 
 
 #onComplete event
-<code><pre>// Set the Countdown
+<pre><code>// Set the Countdown
 jQuery(document).ready(function() {
 	$('#countdown_dashboard').countDown({
 		targetOffset: {
@@ -101,11 +101,11 @@ jQuery(document).ready(function() {
 		// onComplete function
 		onComplete: function() { $('#complete_info_message').slideDown() }
 	});
-});</pre></code>
+});</code></pre>
 
 
 #Multiple instances
-<code><pre>jQuery(document).ready(function() {
+<pre><code>jQuery(document).ready(function() {
 	// Set the first Countdown
 	$('#countdown_dashboard').countDown({
 		targetOffset: {
@@ -130,11 +130,11 @@ jQuery(document).ready(function() {
 		}
 	});
 });
-</pre></code>
+</code></pre>
 
 
 #Omit weeks (3-digit days)
-<code><pre>// Initiate Countdown
+<pre><code>// Initiate Countdown
 jQuery(document).ready(function() {
 	$('#countdown_dashboard').countDown({
 		targetOffset: {
@@ -148,11 +148,11 @@ jQuery(document).ready(function() {
 		omitWeeks: true
 	});
 });
-</pre></code>
+</code></pre>
 
 
 #Standard time (UTC)
-<code><pre>// Initiate Countdown
+<pre><code>// Initiate Countdown
 jQuery(document).ready(function() {
 	$('#countdown_dashboard').countDown({
 		targetDate: {
@@ -167,4 +167,4 @@ jQuery(document).ready(function() {
 		}
 	});
 });
-</pre></code>
+</code></pre>
