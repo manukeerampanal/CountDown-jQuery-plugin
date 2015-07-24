@@ -30,7 +30,7 @@
 <h4>
 <a id="initiate-countdown" class="anchor" href="#initiate-countdown" aria-hidden="true"><span class="octicon octicon-link"></span></a>Initiate Countdown</h4>
 
-<p><code><pre>jQuery(document).ready(function() {
+<pre><code>jQuery(document).ready(function() {
     $('#countdown_dashboard').countDown({
         targetOffset: {
             'day':      0,
@@ -41,12 +41,12 @@
             'sec':      0
         }
     });
-});</pre></code></p>
+});</code></pre>
 
 <h4>
 <a id="set-by-specific-datetime" class="anchor" href="#set-by-specific-datetime" aria-hidden="true"><span class="octicon octicon-link"></span></a>Set by specific date/time</h4>
 
-<p><code><pre>function set_by_date() {
+<pre><code>function set_by_date() {
     $('#countdown_dashboard').stopCountDown();
     $('#countdown_dashboard').setCountDown({
         targetDate: {
@@ -59,12 +59,12 @@
         }
     });
     $('#countdown_dashboard').startCountDown();
-}</pre></code></p>
+}</code></pre>
 
 <h4>
 <a id="set-by-datetime-offset" class="anchor" href="#set-by-datetime-offset" aria-hidden="true"><span class="octicon octicon-link"></span></a>Set by date/time offset</h4>
 
-<p><code><pre>function set_by_offset() {
+<pre><code>function set_by_offset() {
     $('#countdown_dashboard').stopCountDown();
     $('#countdown_dashboard').setCountDown({
         targetOffset: {
@@ -77,7 +77,7 @@
         }
     });
     $('#countdown_dashboard').startCountDown();
-}</pre></code></p>
+}</code></pre>
 
 <h1>
 <a id="startstopreset" class="anchor" href="#startstopreset" aria-hidden="true"><span class="octicon octicon-link"></span></a>Start/Stop/Reset</h1>
@@ -85,7 +85,7 @@
 <h4>
 <a id="set-the-countdown" class="anchor" href="#set-the-countdown" aria-hidden="true"><span class="octicon octicon-link"></span></a>Set the Countdown</h4>
 
-<p><code><pre>jQuery(document).ready(function() {
+<pre><code>jQuery(document).ready(function() {
     $('#countdown_dashboard').countDown({
         targetOffset: {
             'day':      1,
@@ -96,26 +96,26 @@
             'sec':      1
         }
     });
-});</pre></code></p>
+});</code></pre>
 
 <h4>
 <a id="stop-countdown" class="anchor" href="#stop-countdown" aria-hidden="true"><span class="octicon octicon-link"></span></a>Stop countdown</h4>
 
-<p><code><pre>function stop() {
+<pre><code>function stop() {
     $('#countdown_dashboard').stopCountDown();
-}</pre></code></p>
+}</code></pre>
 
 <h4>
 <a id="start-countdown" class="anchor" href="#start-countdown" aria-hidden="true"><span class="octicon octicon-link"></span></a>Start countdown</h4>
 
-<p><code><pre>function start() {
+<pre><code>function start() {
     $('#countdown_dashboard').startCountDown();
-}</pre></code></p>
+}</code></pre>
 
 <h4>
 <a id="reset-and-start" class="anchor" href="#reset-and-start" aria-hidden="true"><span class="octicon octicon-link"></span></a>reset and start</h4>
 
-<p><code><pre>function reset() {
+<pre><code>function reset() {
     $('#countdown_dashboard').stopCountDown();
     $('#countdown_dashboard').setCountDown({
         targetOffset: {
@@ -126,14 +126,14 @@
             'min':      1,
             'sec':      1
         }
-    });<br>
+    });             
     $('#countdown_dashboard').startCountDown();
-}</pre></code></p>
+}</code></pre>
 
 <h1>
 <a id="oncomplete-event" class="anchor" href="#oncomplete-event" aria-hidden="true"><span class="octicon octicon-link"></span></a>onComplete event</h1>
 
-<p><code><pre>// Set the Countdown
+<pre><code>// Set the Countdown
 jQuery(document).ready(function() {
     $('#countdown_dashboard').countDown({
         targetOffset: {
@@ -147,12 +147,12 @@ jQuery(document).ready(function() {
         // onComplete function
         onComplete: function() { $('#complete_info_message').slideDown() }
     });
-});</pre></code></p>
+});</code></pre>
 
 <h1>
 <a id="multiple-instances" class="anchor" href="#multiple-instances" aria-hidden="true"><span class="octicon octicon-link"></span></a>Multiple instances</h1>
 
-<p><code><pre>jQuery(document).ready(function() {
+<pre><code>jQuery(document).ready(function() {
     // Set the first Countdown
     $('#countdown_dashboard').countDown({
         targetOffset: {
@@ -163,28 +163,26 @@ jQuery(document).ready(function() {
             'min':      1,
             'sec':      5
         }
-    });</pre></code></p>
+    });
 
-<pre><code>// Set the second Countdown
-$('#countdown_dashboard2').countDown({
-    targetOffset: {
-        'day':      10,
-        'month':    1,
-        'year':     0,
-        'hour':     6,
-        'min':      34,
-        'sec':      10
-    }
+    // Set the second Countdown
+    $('#countdown_dashboard2').countDown({
+        targetOffset: {
+            'day':      10,
+            'month':    1,
+            'year':     0,
+            'hour':     6,
+            'min':      34,
+            'sec':      10
+        }
+    });
 });
 </code></pre>
-
-<p>});
-</p>
 
 <h1>
 <a id="omit-weeks-3-digit-days" class="anchor" href="#omit-weeks-3-digit-days" aria-hidden="true"><span class="octicon octicon-link"></span></a>Omit weeks (3-digit days)</h1>
 
-<p><code><pre>// Initiate Countdown
+<pre><code>// Initiate Countdown
 jQuery(document).ready(function() {
     $('#countdown_dashboard').countDown({
         targetOffset: {
@@ -198,12 +196,12 @@ jQuery(document).ready(function() {
         omitWeeks: true
     });
 });
-</pre></code></p>
+</code></pre>
 
 <h1>
 <a id="standard-time-utc" class="anchor" href="#standard-time-utc" aria-hidden="true"><span class="octicon octicon-link"></span></a>Standard time (UTC)</h1>
 
-<p><code><pre>// Initiate Countdown
+<pre><code>// Initiate Countdown
 jQuery(document).ready(function() {
     $('#countdown_dashboard').countDown({
         targetDate: {
@@ -218,7 +216,7 @@ jQuery(document).ready(function() {
         }
     });
 });
-</pre></code></p>
+</code></pre>
 
       <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/manukeerampanal/CountDown-jQuery-plugin">Countdown-jquery-plugin</a> is maintained by <a href="https://github.com/manukeerampanal">manukeerampanal</a>.</span>
